@@ -35,7 +35,7 @@ brew install unrar
 ## Usage
 ### Basic Example
 ```python
-from archive_extractor import ArchiveExtractor
+from ArchiveExtractor import ArchiveExtractor
 
 # Initialize extractor
 extractor = ArchiveExtractor()
@@ -46,7 +46,7 @@ print(f"Extracted {len(extracted_files)} files")
 ```
 ### Advanced Example
 ```python
-from archive_extractor import ArchiveExtractor
+from ArchiveExtractor import ArchiveExtractor
 
 # Initialize with custom unrar path
 extractor = ArchiveExtractor(unrar_tool_path="/custom/path/to/unrar")
