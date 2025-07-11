@@ -27,5 +27,4 @@ setup(
         "Documentation": "https://github.com/wns444/ArchiveExtractor/wiki",
         "Source Code": "https://github.com/wns444/ArchiveExtractor",
     },
-    keywords='archive, zip, rar, 7z, extract, utility',
 )
