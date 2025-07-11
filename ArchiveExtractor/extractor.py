@@ -4,6 +4,13 @@ import rarfile
 import py7zr
 from dataclasses import dataclass
 
+@dataclass
+class SupportedFormats:
+    """Supported file extensions for different archive formats."""
+    ZIP = [".zip", ".zipx"]
+    RAR = [".rar", ".cbr"]
+    SEVEN_ZIP = [".7z", ".cb7"]
+
 class ArchiveExtractor:
     """
     A comprehensive library for extracting files from various archive formats.
@@ -27,13 +34,6 @@ class ArchiveExtractor:
             unrar_tool_path (str): Path to unrar executable. Defaults to '/usr/bin/unrar'.
         """
         self._set_unrar_tool(unrar_tool_path)
-    
-    @dataclass
-    class SupportedFormats:
-        """Supported file extensions for different archive formats."""
-        ZIP: list[str] = [".zip", ".zipx"]
-        RAR: list[str] = [".rar", ".cbr"]
-        SEVEN_ZIP: list[str] = [".7z", ".cb7"]
     
     def _set_unrar_tool(self, path: str) -> None:
         """Set the path to unrar executable."""
